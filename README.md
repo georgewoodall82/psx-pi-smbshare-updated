@@ -9,9 +9,9 @@ You can see it in action in this video from [@versatileninja](https://github.com
 The following commands can be used to upgrade an existing psx-pi-smbshare device.  These instructions can also be used to convert an unsupported device into a psx-pi-smbshare (for example [Raspberry Pi4](https://github.com/toolboc/psx-pi-smbshare/issues/10) and potentially other devices running a debian based OS with an accessible ethernet port).
 ```
 cd ~
-wget -O setup.sh https://raw.githubusercontent.com/toolboc/psx-pi-smbshare/master/setup.sh
+wget -O setup.sh https://raw.githubusercontent.com/georgewoodall82/psx-pi-smbshare-updated/master/setup.sh
 chmod 755 setup.sh
-sudo ./setup.sh
+./setup.sh
 ```
 
 ## How it works
@@ -124,7 +124,7 @@ This configuration will forward all ftp requests made to the host ip of the psx-
             IP Address = 192.168.2.2
             Subnet Mask = 255.255.255.0
             Default Router = 192.168.2.1
-            Primary DNS = 8.8.8.8
+            Primary DNS = 1.1.1.1
             Secondary DNS = <leave blank or use your home router ip address>
 
     "Automatic" => "Do Not Use" => "Enable"
@@ -153,7 +153,7 @@ Ensure that the following options are set:
             IP address = 192.168.2.2
             Mask = 255.255.255.0
             Gateway = 192.168.2.1
-            DNS Server = 8.8.8.8
+            DNS Server = 1.1.1.1
         SMB Server
             Address Type = IP
             Address = 192.168.2.1
