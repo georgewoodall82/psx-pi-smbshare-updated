@@ -93,9 +93,11 @@ fi
 
 runuser userplaceholder -s /bin/bash -c "udisksctl mount -b /dev/${PART} --no-user-interaction"
 
+MOUNTPOINT=`lsblk /dev/${PART} -o MOUNTPOINTS -n`
+
 if [ -f /usr/local/bin/ps3netsrv++ ]; then
     pkill ps3netsrv++
-    /usr/local/bin/ps3netsrv++ -d /media/userplaceholder/$UUID
+    /usr/local/bin/ps3netsrv++ -d ${MOUNTPOINT}
 fi
 
 #create a new smb share for the mounted drive
@@ -108,7 +110,7 @@ map to guest = bad user
 allow insecure wide links = yes
 [share]
 Comment = default shared folder
-Path = /media/userplaceholder/$UUID
+Path = ${MOUNTPOINT}
 Browseable = yes
 Writeable = Yes
 only guest = no
