@@ -5,6 +5,8 @@ You can see it in action in this video from [@versatileninja](https://github.com
 
 [![Play PS2 Games Over SMB Using Raspberry Pi 3b+ and psx-pi-smbshare (2019)](https://img.youtube.com/vi/Ilx5NYoUkNA/0.jpg)](https://www.youtube.com/watch?v=Ilx5NYoUkNA)
 
+> **Note:** Ensure you are using the latest version of Open PS2 Loader (OPL), downloaded from [here](https://github.com/ps2homebrew/Open-PS2-Loader/releases). Older versions are known to give error 300.
+
 ## How it works
 psx-pi-smbshare is a collection of shell scripts for the Raspberry Pi.  It can run a [Samba](https://en.wikipedia.org/wiki/Samba_(software)) share, a pi-compatible build of [ps3netsrv](https://github.com/dirkvdb/ps3netsrv--), and can reconfigure the ethernet port to act as a router.  This gives low-latency, direct access to the Samba service through an ethernet cable connection between a PS2/PS3 and Raspberry Pi.  This configuration is achieved by running [setup.sh](/setup.sh).
 
@@ -20,10 +22,12 @@ psx-pi-smbshare also works out of the box on PS2 with [Open Playstation Loader](
 psx-pi-smbshare supports an ability to route traffic from the ethernet port through a wireless network connection to the outside world.  With this configuration, the XLink Kai Service can be used on pretty much any device with an ethernet port.  This includes Xbox, Xbox 360, PS2, PS3, and Gamecube.  There is also support for Ad-Hoc multiplayer on PSP using XLink Kai.  
 
 # Quickstart
+> **Note:** Ensure you are using the latest version of Open PS2 Loader (OPL), downloaded from [here](https://github.com/ps2homebrew/Open-PS2-Loader/releases). Older versions are known to give error 300.
 
 *Prerequisites*
 * Any Raspberry Pi
 * Micro-SD Card (8GB+ suggested)
+* A PS2 with Open PS2 Loader installed, downloaded from [here](https://github.com/ps2homebrew/Open-PS2-Loader/releases)
 
 ## Install Raspberry Pi OS
 **If you already have Raspberry Pi OS installed, you can skip this step.**
