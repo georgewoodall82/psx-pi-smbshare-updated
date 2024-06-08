@@ -22,12 +22,11 @@ psx-pi-smbshare also works out of the box on PS2 with [Open Playstation Loader](
 psx-pi-smbshare supports an ability to route traffic from the ethernet port through a wireless network connection to the outside world.  With this configuration, the XLink Kai Service can be used on pretty much any device with an ethernet port.  This includes Xbox, Xbox 360, PS2, PS3, and Gamecube.  There is also support for Ad-Hoc multiplayer on PSP using XLink Kai.  
 
 # Quickstart
-> **Note:** Ensure you are using the latest version of Open PS2 Loader (OPL), downloaded from [here](https://github.com/ps2homebrew/Open-PS2-Loader/releases). Older versions are known to give error 300.
+> **Note:** Ensure you are using the latest version of Open PS2 Loader (OPL) if using a PS2, downloaded from [here](https://github.com/ps2homebrew/Open-PS2-Loader/releases). Older versions are known to give error 300.
 
 *Prerequisites*
 * Any Raspberry Pi
 * Micro-SD Card (8GB+ suggested)
-* A PS2 with Open PS2 Loader installed, downloaded from [here](https://github.com/ps2homebrew/Open-PS2-Loader/releases)
 
 ## Install Raspberry Pi OS
 **If you already have Raspberry Pi OS installed, you can skip this step.**
@@ -191,11 +190,11 @@ Don't forget to select "Save Config" when you return to "Settings"
 * An XLink Kai account from http://www.teamxlink.co.uk/
 
 *Steps*
-1. Burn the [latest psx-pi-smbshare image](https://github.com/toolboc/psx-pi-smbshare/releases) to a Micro-SD card
-2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](https://github.com/toolboc/psx-pi-smbshare#configuring-wireless-network)
-3. Add a second Wi-fi dongle to the pi as described in [Using a second wifi interface as an access point to XLink Kai](https://github.com/toolboc/psx-pi-smbshare#using-a-second-wifi-interface-as-an-access-point-to-xlink-kai) 
+1. Setup psx-pi-smbshare as described in [Quickstart](#quickstart)
+2. Setup Wi-Fi on the pi and get the IP via `ifconfig` and looking at the wlan0 section
+3. Add a second Wi-fi dongle to the pi as described in [Using a second wifi interface as an access point to XLink Kai](#using-a-second-wifi-interface-as-an-access-point-to-xlink-kai)
 4. Configure your Switch to connect to the "XLinkKai" access point and set the `DNS Settings` to manual and set the `Primary DNS` to 10.254.0.1 and ensure that `Autoconnect` is set to "on" as described in the [XLinkKai Nintendo Switch Tutorial](https://www.teamxlink.co.uk/wiki/Nintendo_Switch_XLink_Kai_Setup).
-4. Vist the XLink Kai service running on the pi @ http://smbshare:34522 or http://<YOUR_PSX_PI_SMBSHARE_DEVICE_IP>:34522/ and login with your XLink Kai account
+4. Vist the XLink Kai service running on the pi @ http://<YOUR_PSX_PI_SMBSHARE_DEVICE_IP>:34522/ and login with your XLink Kai account
 5. In the XLink Kai portal, select `Configuration` and ensure that `Network Adapter` is set to to `wlan1` to ensure that XLinkKai captures packets from the proper wireless interface.
 6. In the XLink Kai portal , select `Game Arenas` and navigate to the room for the game that you wish to play
 7. Launch the game on your Switch and start up LAN mode and create a LAN game (Do not confuse with Local Wireless, many games involve a special keypress combination to enable LAN mode, please research accordingly).  If asked to connect to a network during this process, select the "XLinkKai" SSID that is being served from the raspberry pi.
@@ -213,10 +212,10 @@ Don't forget to select "Save Config" when you return to "Settings"
 * An XLink Kai account from http://www.teamxlink.co.uk/
 
 *Steps*
-1. Burn the [latest psx-pi-smbshare image](https://github.com/toolboc/psx-pi-smbshare/releases) to a Micro-SD card
-2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](https://github.com/toolboc/psx-pi-smbshare#configuring-wireless-network)
+1. Setup psx-pi-smbshare as described in [Quickstart](#quickstart)
+2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](#configuring-wireless-network)
 3. Plug the pi into the Xbox ethernet port and verify that you are able to obtain an ip automatically in Network Settings
-4. Vist the XLink Kai service running on the pi @ http://smbshare:34522 or http://<YOUR_PSX_PI_SMBSHARE_DEVICE_IP>:34522/ and login with your XLink Kai account
+4. Vist the XLink Kai service running on the pi @ http://<YOUR_PSX_PI_SMBSHARE_DEVICE_IP>:34522/ and login with your XLink Kai account
 5. Select an available Halo game from the XLink Kai portal (there are usually a few running in South America)
 6. Launch Halo 2 and select "System Link"
 7. Join a game and have fun!
@@ -229,8 +228,8 @@ Don't forget to select "Save Config" when you return to "Settings"
 * An XLink Kai account from http://www.teamxlink.co.uk/
 
 *Steps*
-1. Burn the [latest psx-pi-smbshare image](https://github.com/toolboc/psx-pi-smbshare/releases) to a Micro-SD card
-2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](https://github.com/toolboc/psx-pi-smbshare#configuring-wireless-network)
+1. Setup psx-pi-smbshare as described in [Quickstart](#quickstart)
+2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](#configuring-wireless-network)
 3. Plug the pi into the PS2 ethernet port
 4. The following setup needs to be performed one time:  Boot your PS2 up with SOCOM 2 and select "Online" at the title screen. Once you hit the first blue screen hit edit network configuration to be sent to the network setup. Now delete any old network settings and create a new one. Using Automatic settings is fine but you may wish to set the following manual settings if you have issues:
 
@@ -247,9 +246,9 @@ Don't forget to select "Save Config" when you return to "Settings"
 * 1 external wifi dongle for RPi 2/3 or 2 external wifi dongles for RPi 1
 
 *Steps*
-1. Burn the [latest psx-pi-smbshare image](https://github.com/toolboc/psx-pi-smbshare/releases) to a Micro-SD card
+1. Setup psx-pi-smbshare as described in [Quickstart](#quickstart)
 2. Plug in the external wifi dongle(s)
-3. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](https://github.com/toolboc/psx-pi-smbshare#configuring-wireless-network)
+3. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](#configuring-wireless-network)
 4. Configure the device to connect to "XLinkKai" SSID when the pi has booted using Password `XLinkKai` 
 
 Note: XLinkKai will only work on one network interface (wifi or ethernet) at a time and will lock onto the first interface connected to from a compatible device until reboot
@@ -263,8 +262,8 @@ Note: XLinkKai will only work on one network interface (wifi or ethernet) at a t
 * An XLink Kai account from http://www.teamxlink.co.uk/
 
 *Steps*
-1. Burn the [latest psx-pi-smbshare image](https://github.com/toolboc/psx-pi-smbshare/releases) to a Micro-SD card
-2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](https://github.com/toolboc/psx-pi-smbshare#configuring-wireless-network)
+1. Setup psx-pi-smbshare as described in [Quickstart](#quickstart)
+2. Configure Wi-fi per the steps above in ["Configuring the Wireless Network"](#configuring-wireless-network)
 3. SSH to you psx-pi-smbshare instance using the default username `pi` and default password `raspberry`
 4. Ensure that your PSP is set to Automatic in Network Settings under Ad Hoc Mode
 5. Run the following commands to disable the hostapd access point and enable Ad-Hoc Wifi:
