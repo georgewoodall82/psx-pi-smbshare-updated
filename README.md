@@ -37,7 +37,7 @@ Download the latest [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-ima
 The following commands can be used to install psx-pi-smbshare on Raspberry Pi OS (and potentially other debian-based distros).
 ```
 cd ~
-wget -O setup.sh https://raw.githubusercontent.com/toolboc/psx-pi-smbshare/master/setup.sh
+wget -O setup.sh https://raw.githubusercontent.com/georgewoodall82/psx-pi-smbshare-updated/master/setup.sh
 chmod 755 setup.sh
 ./setup.sh
 ```
